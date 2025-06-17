@@ -8,7 +8,7 @@ import org.springframework.test.context.ActiveProfiles
 import spock.lang.Ignore
 import spock.lang.Specification
 
-@Ignore
+//@Ignore
 @SpringBootTest(classes = NaverClientTest.TestConfig.class)
 @ActiveProfiles("test")
 class NaverClientTest extends Specification {
@@ -23,7 +23,7 @@ class NaverClientTest extends Specification {
     def "naver 호출"() {
         given:
         when:
-        def response = naverClient.search("HTTP",1,10)
+        def response = naverClient.search("HTTP",999999999,10)
 
         then:
         response.total == 31
